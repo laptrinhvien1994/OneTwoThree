@@ -1,0 +1,22 @@
+.sentences{
+    display: flex;
+    flex-direction: column;
+    .sentence{
+        display: flex;
+        margin: 5px 0px;
+        align-items: center;
+        textarea, input {
+            margin-right: 5px;
+        }
+        input:nth-child(2){
+            width: 30px;
+        }
+        button:nth-child(4), button:nth-child(5) {
+            margin-right: 5px;
+        }
+    }
+}
+
+button{
+    cursor: pointer;
+}

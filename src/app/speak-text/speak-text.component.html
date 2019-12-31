@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+    <div class="sentences" formArrayName="sentences">
+        <div formGroupName="{{i}}" class="sentence" *ngFor="let sentence of sentencesFormArray.controls; let i=index">
+            <textarea formControlName="text"></textarea>
+            <input type="text" MQCurrency [configuration]="{ 'minValue': 1 }" formControlName="times" />
+            <input type="checkbox" formControlName="isInfinityLoop">
+            <button (click)="speakText(i)">Speak</button>
+            <button (click)="stopSpeaking(i)">Stop</button>
+            <button (click)="removeText(i)">Remove</button>
+        </div>
+    </div>
+</form>
+<button (click)="addSentence()">Add</button>
