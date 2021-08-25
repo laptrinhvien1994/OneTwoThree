@@ -4,11 +4,11 @@
         <input type="text" MQCurrency [configuration]="{ 'minValue': 1 }" formControlName="times" />
         <button (click)="clone()">Clone</button>
         &nbsp;
-        <button (click)="clear(i)">Clear</button>
+        <button (click)="clear()">Clear</button>
     </div>
     <div class="result">
         <textarea disabled id="result" placeholder="The result will be here" formControlName="result"></textarea>
         <br/>
-        <button (click)="copyToClipboard(i)">Copy to clipboard</button>
+        <button (click)="copyToClipboard()">Copy to clipboard</button>
     </div>
 </form>
