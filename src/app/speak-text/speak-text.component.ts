@@ -29,9 +29,10 @@ export class SpeakTextComponent implements OnDestroy {
         });
     }
 
-    generateFormGroup(text = null, times = 5, isInfinityLoop = false) {
+    generateFormGroup(text = null, breakTime = 0, times = 5, isInfinityLoop = false) {
         const formGroup = new FormGroup({
             text: new FormControl(text, [Validators.required]),
+            breakTime: new FormControl(breakTime, [Validators.required]),
             times: new FormControl(times, [Validators.required]),
             isInfinityLoop: new FormControl(isInfinityLoop, [Validators.required])
         });
@@ -49,6 +50,7 @@ export class SpeakTextComponent implements OnDestroy {
         if (!this.speakTextService.isSpeaking()) {
             const eachSentenceFormGroup = this.sentencesFormArray.controls[index] as FormGroup;
             const textFormControl = eachSentenceFormGroup.controls.text;
+            const breakTimeFormControl = eachSentenceFormGroup.controls.breakTime;
             const timesFormControl = eachSentenceFormGroup.controls.times;
             const isInfinityLoopFormControl = eachSentenceFormGroup.controls.isInfinityLoop;
             const isInfinityLoop = isInfinityLoopFormControl.value;
