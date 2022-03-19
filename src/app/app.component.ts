@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     const canvasC = document.getElementById('c');
 
     const config = {
-      birthdate: 'Mar 19, 2022',
+      birthdate: 'Mar 20, 2022',
       name: 'MEO MEO'
     };
 
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
       hour = minute * 60,
       day = hour * 24;
 
-    let countDown = new Date(`${config.birthdate} 10:20:00`).getTime();
+    let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
     let x = setInterval(function () {
       let now = new Date().getTime(),
         distance = countDown - now;
