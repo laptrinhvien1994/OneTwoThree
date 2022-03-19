@@ -247,14 +247,6 @@ li span {
   transition: all 0.2s ease-in-out;
 }
 
-// body {
-//   // background: #008888;
-//   // display: grid;
-//   // place-items: center;
-//   height: 100vh;
-//   margin: 0;
-//   font-family: 'Open Sans', sans-serif;
-// }
 
 .card {
   background: #fdfdfd;
@@ -302,9 +294,10 @@ img.birthday {
 
 .text {
   padding: 1em;
-  h1 {
-    color: red;
-  }
+}
+
+.text h1 {
+  color: red;
 }
 
 .muted {
