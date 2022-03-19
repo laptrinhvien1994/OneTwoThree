@@ -121,7 +121,7 @@ export class AppComponent implements OnInit {
         TauQuarter = Tau / 4,
         letters = [];
 
-      ctx.font = opts.charSize + 'px Segoe UI';
+      ctx.font = opts.charSize + 'px Tahoma';
 
       function Letter(char, x, y) {
         this.char = char;
