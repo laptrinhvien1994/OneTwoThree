@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div class="card" *ngIf="quarter % 5 === 1">
+<div class="card hidden" [ngClass]="{ 'show': quarter % 5 === 1 }">
   <img src="./../assets/imgs/rose.jpg" alt="birthday" class="birthday">
   <div class="text">
     <h1>Luôn xinh đẹp</h1>
@@ -27,7 +27,7 @@
   <div class="space"></div>
 </div>
 
-<div class="card" *ngIf="quarter % 5 === 2">
+<div class="card hidden" [ngClass]="{ 'show': quarter % 5 === 2 }">
   <img src="./../assets/imgs/sunflower.jpg" alt="birthday" class="birthday">
   <div class="text">
     <h1>Luôn mạnh mẽ</h1>
@@ -36,7 +36,7 @@
   <div class="space"></div>
 </div>
 
-<div class="card" *ngIf="quarter % 5 === 3">
+<div class="card hidden" [ngClass]="{ 'show': quarter % 5 === 3 }">
   <img src="./../assets/imgs/lotus.jpg" alt="birthday" class="birthday">
   <div class="text">
     <h1>Luôn bình an</h1>
@@ -45,7 +45,7 @@
   <div class="space"></div>
 </div>
 
-<div class="card" *ngIf="quarter % 5 === 4">
+<div class="card hidden" [ngClass]="{ 'show': quarter % 5 === 4 }">
   <img src="./../assets/imgs/narcissus.jpg" alt="birthday" class="birthday">
   <div class="text">
     <h1>Luôn hạnh phúc</h1>
@@ -54,7 +54,7 @@
   <div class="space"></div>
 </div>
 
-<div class="card" *ngIf="quarter % 5 === 0 && quarter > 0">
+<div class="card hidden" [ngClass]="{ 'show': quarter % 5 === 0 && quarter > 0 }">
   <img src="./../assets/imgs/Tonton.jpg" alt="birthday" class="birthday">
   <div class="text">
     <h1>Cảm ơn em!</h1>
