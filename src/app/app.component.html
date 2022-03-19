@@ -1,4 +1,65 @@
-<hr/>
-<app-speak-text></app-speak-text>
-<hr/>
-<app-clone-text></app-clone-text>
+<canvas style="position: fixed;" id=c></canvas>
+<canvas id="confetti"></canvas>
+<div class="container" id="count">
+  <h1 id="head">Cùng đếm ngược nàoooo</h1>
+  <ul>
+    <li><span id="hour"></span>giờ</li>
+    <li><span id="minute"></span>phút</li>
+    <li><span id="second"></span>giây</li>
+  </ul>
+</div>
+<div id="merrywrap" class="merrywrap">
+  <canvas id="snowfall"></canvas>
+  <div class="giftbox">
+    <div class="cover">
+      <div></div>
+    </div>
+    <div class="box"></div>
+  </div>
+</div>
+
+<div class="card" *ngIf="quarter % 5 === 1">
+  <img src="./../assets/imgs/rose.jpg" alt="birthday" class="birthday">
+  <div class="text">
+    <h1>Luôn xinh đẹp</h1>
+    <p>Chúc em luôn xinh đẹp, rạng rỡ theo cách của mình.</p>
+  </div>
+  <div class="space"></div>
+</div>
+
+<div class="card" *ngIf="quarter % 5 === 2">
+  <img src="./../assets/imgs/sunflower.jpg" alt="birthday" class="birthday">
+  <div class="text">
+    <h1>Luôn mạnh mẽ</h1>
+    <p>Mong em sẽ luôn mạnh mẽ và vững tâm dù có gặp khó khăn gì.</p>
+  </div>
+  <div class="space"></div>
+</div>
+
+<div class="card" *ngIf="quarter % 5 === 3">
+  <img src="./../assets/imgs/lotus.jpg" alt="birthday" class="birthday">
+  <div class="text">
+    <h1>Luôn bình an</h1>
+    <p>Mong mọi điều tốt đẹp sẽ luôn đến với em.</p>
+  </div>
+  <div class="space"></div>
+</div>
+
+<div class="card" *ngIf="quarter % 5 === 4">
+  <img src="./../assets/imgs/narcissus.jpg" alt="birthday" class="birthday">
+  <div class="text">
+    <h1>Luôn hạnh phúc</h1>
+    <p>Chúc em mãi luôn hạnh phúc trong cuộc sống.</p>
+  </div>
+  <div class="space"></div>
+</div>
+
+<div class="card" *ngIf="quarter % 5 === 0 && quarter > 0">
+  <img src="./../assets/imgs/Tonton.jpg" alt="birthday" class="birthday">
+  <div class="text">
+    <h1>Cảm ơn em!</h1>
+    <p>Cảm ơn em đã đến bên và đồng hành cùng anh trong cuộc đời này. <span style="color: rgb(247, 16, 16); font-weight: bold;">Anh yêu Em nhiều.</span> ❤️</p>
+  </div>
+  <div class="space"></div>
+</div>
+<button class="next" *ngIf="isBoxOpened" (click)="next()">>></button>
