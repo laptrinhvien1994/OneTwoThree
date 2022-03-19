@@ -266,28 +266,6 @@ li span {
   margin-top: 30px;
 }
 
-@media only screen and (min-width: 1000px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
-@media only screen and (max-height: 640px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
 img.birthday {
   max-height: 33vh;
 }

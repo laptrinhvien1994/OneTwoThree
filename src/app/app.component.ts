@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
 
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
         hw = w / 2, // half-width
         hh = h / 2,
         opts = {
-          strings: ['Happy', 'Birthday!', `❤️${config.name}❤️`], //❤️
+          strings: ['Happy', 'Birthday!', `${config.name}`], //❤️
           charSize: 30,
           charSpacing: 35,
           lineHeight: 40,
@@ -549,8 +549,11 @@ export class AppComponent implements OnInit {
 
   initSongs() {
     var themeSongAudio = new Audio('./../assets/songs/theme-song.mp3');
+    themeSongAudio.muted = true;
+    themeSongAudio.loop = true;
     this.themeSongAudio = themeSongAudio;
     var mainSongAudio = new Audio('./../assets/songs/happy-birthday.mp3');
+    mainSongAudio.loop = true;
     this.mainSongAudio = mainSongAudio;
   }
 
