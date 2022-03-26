@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     const canvasC = document.getElementById('c');
 
     const config = {
-      birthdate: 'Mar 20, 2022',
+      birthdate: 'Mar 20, 2023',
       name: 'MEO MEO'
     };
 
